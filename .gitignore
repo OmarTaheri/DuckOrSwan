@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Dataset (10,000 images, ~1.5 GB) - rebuild with scripts/download_data.py
+data/
+
+# Report (kept private) and the scripts that only generate report figures/numbers
+report/
+scripts/make_report_numbers.py
+scripts/final_curves.py
+
+# Course material
+*.pdf
+
+# Training by-products: only the final model is published
+model/*
+!model/duck_swan_model.keras

@@ -1,0 +1,9 @@
+.venv
+data
+report
+scripts
+**/__pycache__
+*.pdf
+model/model_*.keras
+model/*.json
+model/*.txt

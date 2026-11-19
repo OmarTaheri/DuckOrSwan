@@ -1,0 +1,6 @@
+keras==3.*
+numpy
+pillow
+fastapi
+uvicorn[standard]
+python-multipart

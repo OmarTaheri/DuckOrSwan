@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duck vs Swan Classification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="arena" id="arena" data-state="idle">
+    <section class="side side-left" id="side-duck" aria-label="Duck">
+      <div class="side-inner">
+        <img class="bird" src="/static/img/duck.png" alt="Duck">
+        <div class="side-label">DUCK</div>
+        <div class="badge" id="badge-duck"></div>
+      </div>
+    </section>
+
+    <section class="side side-right" id="side-swan" aria-label="Swan">
+      <div class="side-inner">
+        <img class="bird" src="/static/img/swan.png" alt="Swan">
+        <div class="side-label">SWAN</div>
+        <div class="badge" id="badge-swan"></div>
+      </div>
+    </section>
+
+    <header class="title">
+      <h1>Duck and Swan Classification</h1>
+      <p class="subtitle">Upload a bird photo and let the CNN pick a side</p>
+    </header>
+
+    <div class="center">
+      <div class="vs" id="vs">VS</div>
+      <div class="preview" id="preview" hidden><img id="preview-img" alt="Your upload"></div>
+    </div>
+
+    <footer class="controls">
+      <label class="dropzone" id="dropzone">
+        <input type="file" id="file" accept="image/*" hidden>
+        <span class="drop-icon">&#8679;</span>
+        <span id="drop-text">Drop an image here or <u>browse</u></span>
+      </label>
+      <p class="status" id="status" aria-live="polite"></p>
+      <button class="again" id="again" hidden>Play again</button>
+    </footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

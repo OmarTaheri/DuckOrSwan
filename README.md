@@ -3,6 +3,11 @@
 A convolutional neural network (Keras 3) that tells ducks from swans, served as a "Duck vs Swan" web game.
 Upload a bird photo: both sides of the page start grey, and the side the CNN picks lights up green with its confidence.
 
+### 🌐 Live demo: [duckorswan.omartaheri.com](https://duckorswan.omartaheri.com)
+
+[![Duck vs Swan website](docs/website.jpg)](https://duckorswan.omartaheri.com)
+*A black swan uploaded to the live site: the CNN picks **Swan** (99.9 %) and that side turns green.*
+
 **Test accuracy: 92.6 %** on 1,500 unseen photos (precision/recall ≈ 92–93 % for both classes).
 
 ## Model
@@ -56,7 +61,9 @@ docker run -p 8000:8000 duck-swan
 ## Deploy on Coolify
 1. **New Resource → Application →** this GitHub repository.
 2. Set **Build Pack** to **Dockerfile** and **Ports Exposes** to **8000**, then add your domain.
-3. Deploy. The image has a built-in health check (`/health`). Inference runs on CPU only (about 0.1–0.2 s per image); no GPU is needed.
+3. Deploy. The image has a built-in health check (`/health`). Inference runs on CPU only (about 0.25 s per image); no GPU is needed.
+
+The live deployment runs at https://duckorswan.omartaheri.com.
 
 ## Re-train (NVIDIA GPU)
 ```powershell
